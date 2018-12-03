@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">EventManagement</string>
+    <string name="title_add_event">Add Event</string>
+    <string name="add_birthday">Add Birthday Event</string>
+    <string name="add_anniversary">Add Anniversary Event</string>
+    <string name="add_custom">Add Custom Event</string>
+    <string name="update_birthday">Update Birthday Event</string>
+    <string name="update_anniversary">Update Anniversary Event</string>
+    <string name="update_custom">Update Custom Event</string>
+    <string name="sms_and_contact_permission">Event Management would like to access your contact and send SMS wishes for
+        event
+    </string>
+</resources>

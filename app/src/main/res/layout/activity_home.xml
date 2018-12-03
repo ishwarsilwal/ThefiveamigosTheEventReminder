@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+                name="homeViewModel"
+                type="event.prototype.app.eventmanagement.home.viewmodel.HomeViewModel"/>
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".home.HomeActivity">
+
+        <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_height="wrap_content">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:weightSum="1"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+
+                    <Button
+                            style="@style/Widget.MaterialComponents.Button"
+                            android:layout_weight="0.5"
+                            android:text="Add"
+                            android:onClick="@{() -> homeViewModel.onNavigateToAdd()}"
+                            android:layout_margin="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"/>
+
+                    <Button
+                            style="@style/Widget.MaterialComponents.Button"
+                            android:layout_weight="0.5"
+                            android:text="Update"
+                            android:visibility="gone"
+                            android:onClick="@{() -> homeViewModel.onNavigateToUpdate()}"
+                            android:layout_margin="5dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:weightSum="1"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+
+                    <Button
+                            android:layout_weight="0.5"
+                            android:layout_margin="5dp"
+                            android:text="Delete"
+                            android:visibility="gone"
+                            android:onClick="@{() -> homeViewModel.onNavigateToDelete()}"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"/>
+
+                    <Button
+                            style="@style/Widget.MaterialComponents.Button"
+                            android:layout_weight="0.5"
+                            android:layout_margin="5dp"
+                            android:text="View"
+                            android:onClick="@{() -> homeViewModel.onNavigateToView()}"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>
